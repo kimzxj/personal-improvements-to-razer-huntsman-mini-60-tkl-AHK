@@ -120,9 +120,9 @@ F13 & q::SendInput {Media_Prev}
 F13 & e::SendInput {Media_Next}
 
 
-// Make F13 & Left Shift the application menu key 
+// Make F13 & Right Shift the application menu key 
 #If Profile = 1
-F13 & LShift::SendInput {AppsKey}
+F13 & RShift::SendInput {AppsKey}
 
 
 // Make F13 & m equivalent to WinKey+m (show Desktop)
@@ -156,10 +156,10 @@ Tab & e::Numpad9
 
 
 !Tab::Send {Alt Down}{Tab}
-Tab::Send {Tab}
+^Tab::Send {Tab}
 
 
-F13 & F15::
+Right & F15::
 {
     Send,    {RButton}
     Sleep    50
@@ -171,7 +171,7 @@ F13 & F15::
 }
 Return
 
-F13 & F16::
+Right & F16::
 {
     Send,    {LButton}
     Send,    {Ctrl Down}
@@ -183,6 +183,19 @@ F13 & F16::
 	Send,	 {Enter}
 }
 Return
+
+Right & F24::
+windir = c:\Windows
+Run, %windir%\system32\osk.exe
+return
+
+Right & F23::SendInput {XButton2}
+Return
+
+Right & F22::SendInput {XButton1}
+Return
+
+~Right::SendInput {Right}
 
 // Make profile 2 numpad
 #If Profile = 2
