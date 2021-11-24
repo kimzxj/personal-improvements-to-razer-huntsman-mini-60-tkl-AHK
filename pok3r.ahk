@@ -52,7 +52,7 @@ F13 & n::SendInput {Blind}{End Down}
 F13 & n up::SendInput {Blind}{End Up}
 
 
-// F13 + number keys equal function keys (F13-F24)
+// F13 + number keys equal function keys (F1-F12)
 #If Profile = 1
 F13 & 1::SendInput {Blind}{F13}
 F13 & 2::SendInput {Blind}{F14}
@@ -67,7 +67,7 @@ F13 & SC00B::SendInput {Blind}{F22}
 F13 & SC00C::SendInput {Blind}{F23}
 F13 & SC00D::SendInput {Blind}{F24}
 
-// tilde + number keys equal function keys (f1-f12)
+
 SC029 & 1::SendInput {Blind}{F1}
 SC029 & 2::SendInput {Blind}{F2}
 SC029 & 3::SendInput {Blind}{F3}
@@ -157,6 +157,32 @@ Tab & e::Numpad9
 
 !Tab::Send {Alt Down}{Tab}
 Tab::Send {Tab}
+
+
+F13 & F15::
+{
+    Send,    {RButton}
+    Sleep    50
+    Send,    o
+	Sleep    50
+	Send,	 o 
+	Sleep	 50
+	Send,	 Enter
+}
+Return
+
+F13 & F16::
+{
+    Send,    {LButton}
+    Send,    {Ctrl Down}
+    Sleep    50
+    Send,    v
+	Sleep    50
+	Send,	 {Ctrl Up}
+	Sleep	 50
+	Send,	 {Enter}
+}
+Return
 
 // Make profile 2 numpad
 #If Profile = 2
