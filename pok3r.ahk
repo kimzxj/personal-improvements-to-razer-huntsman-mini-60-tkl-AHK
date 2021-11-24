@@ -52,7 +52,7 @@ F13 & n::SendInput {Blind}{End Down}
 F13 & n up::SendInput {Blind}{End Up}
 
 
-// F13 + number keys equal function keys (F1-F12)
+// F13 + number keys equal function keys (F13-F24)
 #If Profile = 1
 F13 & 1::SendInput {Blind}{F13}
 F13 & 2::SendInput {Blind}{F14}
@@ -66,6 +66,22 @@ F13 & 9::SendInput {Blind}{F21}
 F13 & SC00B::SendInput {Blind}{F22}
 F13 & SC00C::SendInput {Blind}{F23}
 F13 & SC00D::SendInput {Blind}{F24}
+
+// tilde + number keys equal function keys (f1-f12)
+SC029 & 1::SendInput {Blind}{F1}
+SC029 & 2::SendInput {Blind}{F2}
+SC029 & 3::SendInput {Blind}{F3}
+SC029 & 4::SendInput {Blind}{F4}
+SC029 & 5::SendInput {Blind}{F5}
+SC029 & 6::SendInput {Blind}{F6}
+SC029 & 7::SendInput {Blind}{F7}
+SC029 & 8::SendInput {Blind}{F8}
+SC029 & 9::SendInput {Blind}{F9}
+SC029 & SC00B::SendInput {Blind}{F10}
+SC029 & SC00C::SendInput {Blind}{F11}
+SC029 & SC00D::SendInput {Blind}{F12}
+
+SC029::SendInput {SC029}
 
 // Make F13 & Backspace equivalent to delete
 #If Profile = 1
